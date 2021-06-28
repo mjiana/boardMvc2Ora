@@ -4,6 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class WriteFormAction implements CommandAction {
+	//오버라이딩
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) 
 			throws Throwable{
 		//제목글과 답변글 구분
@@ -27,5 +28,6 @@ public class WriteFormAction implements CommandAction {
 		request.setAttribute("re_level", new Integer(re_level));
 		
 		return "writeForm.jsp";
-	}
-}
+	}//requestPro
+	
+}//class

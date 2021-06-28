@@ -1,13 +1,107 @@
-table{
+*{
+	font-family: arial, ±¼¸²;
+	font-size: 11pt;
+}
+.write{
 	width: 400px;
-	border: 1px solid black;
+	/* border: 1px solid black; */
 	padding: 0;
 	margin: auto;
 	text-align: center;
+	line-height: 1.5;
+}
+.list{
+	max-width: 70%;
+	/* border: 1px solid black; */
+	padding: 0;
+	margin: auto;
+	text-align: center;
+	line-height: 1.5;
+}
+.content{
+	/* border: 1px solid #b0e0e6; */
+	/* border-top: 3px solid #b0e0e6; */
+	max-width: 70%;
+	padding: 0;
+	margin: auto;
+	text-align: center;
+	line-height: 1.5;
+	/* border-collapse: collapse; */
+}
+#logo{
+	margin:auto;
+	padding:0;
+	text-align: center;
+	width: 70%;
+}
+.list_title{
+	margin:auto;
+	padding:0;
+	width: 70%;
+	text-align: center;
+}
+.title{
+	text-align: center;
+	display: inline-block;
+	width: 90%;
+}
+.link_write{
+	text-align: right;
+	display: inline-block;
 }
 th{
-	width: 70px;
+	width: 100px;
 }
 td{
 	width: 330px;
+}
+input[type=text], input[type=password]{
+	width: 230px;
+}
+textarea{
+	width: 230px;
+	height: 120px;
+}
+input[type=submit], input[type=button], input[type=reset]{
+	background-color: white;
+	line-height: 150%;
+	border: 1px solid black;
+}
+a{
+	text-decoration: none;
+	color: #2b7c86;
+}
+a:hover, a:visited{
+	text-decoration: underline;
+}
+.subject{
+	width:30%;
+}
+.writer{
+	width:15%;
+}
+.date{
+	width:25%;
+}
+#paging{
+	text-align: center;
+	margin-top: 10px;
+}
+.sub_img{
+	vertical-align: middle;
+	width: 12px;
+}
+#search{
+	text-align: center;
+}
+.searchClass{
+	line-height: 135% !important;
+	vertical-align: middle;
+}
+.right{
+	text-align: right;
+	width:69%;
+	margin:auto;
+	display: block;
+	color: gray;
 }

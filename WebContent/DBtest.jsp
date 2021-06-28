@@ -8,7 +8,7 @@
 </head>
 <body>
 <%
-boardDBBean db = boardDBBean.getInstance();
+	BoardDBBean db = BoardDBBean.getInstance();
 db.getConnection();
 %>
 </body>

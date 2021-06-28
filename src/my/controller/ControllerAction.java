@@ -51,28 +51,28 @@ public class ControllerAction extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
 		execute(request, response);
-	}
+	}//doGet
 	
 	@Override // post요청시 실행되는 메서드
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
 		execute(request, response);
-	}
+	}//doPost
 	
-	//사용자 요청을 분석해서 작업 처리
-		private void execute(HttpServletRequest request, HttpServletResponse response) 
-				throws ServletException, IOException {
-			String view = null;
-			CommandAction com = null;
-			try {
-				String command = request.getRequestURI();
-				com = (CommandAction)commandMap.get(command);
-				view = com.requestPro(request, response);
-			} catch (Throwable e) {
-				throw new ServletException(e);
-			}
-			RequestDispatcher dispatcher = request.getRequestDispatcher(view);
-			dispatcher.forward(request, response);
+	//사용자 요청을 분석해서 작업 처리, 캡슐화/어댑터 패턴으로 사용가능
+	private void execute(HttpServletRequest request, HttpServletResponse response) 
+			throws ServletException, IOException {
+		String view = null;
+		CommandAction com = null;
+		try {
+			String command = request.getRequestURI();
+			com = (CommandAction)commandMap.get(command);
+			view = com.requestPro(request, response);
+		} catch (Throwable e) {
+			throw new ServletException(e);
 		}
+		RequestDispatcher dispatcher = request.getRequestDispatcher(view);
+		dispatcher.forward(request, response);
+	}//execute
 		
-}
+}//class
